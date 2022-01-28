@@ -15,6 +15,16 @@ def new(x:int(),y:int()):
 #a,b = int(input()), int(input())
 #print(new(a,b))
 
+#TASK2
+#2.	Выполнить функцию, которая принимает несколько параметров,
+# описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
+# Функция должна принимать параметры как именованные аргументы. Осуществить вывод данных о пользователе одной строкой.
+
+def info():
+    name,surname,birthday,city,email,tel = [input() for _ in range(6)]
+    return print(f'Здравствуйте,{name} {surname}, дата рождения {birthday}, проживающий в городе {city}, email {email}, телефон {tel}')
+
+info()
 #TASK3
 #3.	Реализовать функцию my_func(), которая принимает три позиционных аргумента и возвращает сумму наибольших двух аргументов.
 # Обработать условие ввода строки
@@ -67,6 +77,6 @@ def domain_name(s:str):
             break
     return print(ss)
 
-domain_name("http://yandex.com")
+#domain_name("http://yandex.com")
 
 
