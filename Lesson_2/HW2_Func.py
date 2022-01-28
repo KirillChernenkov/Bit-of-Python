@@ -46,6 +46,27 @@ def my_func11(xx:int,yy:int):
    return print(ans)
 
 
-a,b = int(input()),int(input())
-my_func11(a,b)
+#a,b = int(input()),int(input())
+#my_func11(a,b)
+
+
+#TASK6
+#Реализовать функцию domain_name() которая принимает название сайта (позиционный аргумент) и возвращает только название домена.
+# Реализовать двумя способами , с регулярными выражениями и без них
+# domain_name("http://google.com") return "google"
+
+def domain_name(s:str):
+    y = int()
+    ss = str()
+    for x in range(len(s)):
+        if s[x]=='/' and s[x+1]!='/':
+            y = x
+    for x in range(y+1,len(s)):
+        ss = ss + s[x]
+        if s[x + 1] == '.':
+            break
+    return print(ss)
+
+domain_name("http://yandex.com")
+
 
