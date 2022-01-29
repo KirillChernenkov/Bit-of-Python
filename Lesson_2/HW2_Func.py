@@ -5,17 +5,22 @@ import re
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
 # Использовать два варианта обработки деления на 0. Через if else и через try except
 
-def new(x:int(),y:int()):
-    while True:
-        try:
-            return x/y
-        except ValueError:
-            print('Ошибка. Ожидалось вещественное число.')
+def task1_1(x,y):
+    if y==0:
+        print(f'Ошибка! Делить на ноль нельзя')
+    else:
+        return print(x/y)
 
 
+def task1_2(x,y):
+    try:
+        return print(x/y)
+    except ZeroDivisionError as e:
+        print(f'Ошибка! Делить на ноль нельзя')
 
-#a,b = int(input()), int(input())
-#print(new(a,b))
+
+a,b = int(input()), int(input())
+task1_1(a,b)
 
 #TASK2
 #2.	Выполнить функцию, которая принимает несколько параметров,
@@ -73,6 +78,21 @@ def my_func11(xx:int,yy:int):
 # Если специальный символ введён после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
 # ранее сумме и после этого завершить программу.
 
+def task5():
+    res = 0
+    while True:
+        numbers = input('Enter list of number or + to exit: ').split()
+        for i in numbers:
+            try:
+                if i == '+':
+                    print(f'Sum is {res}. Exit')
+                    return
+                else:
+                    res += int(i)
+            except ValueError:
+                print('Enter number or *')
+        print(f'Sum is {res}')
+
 
 
 #TASK6
@@ -96,7 +116,7 @@ def domain_name_regex(s:str):
     domain = re.search('//([A-Za-z_0-9.-]+)[.]', s)
     return print(domain.group(1))
 
-domain_name_regex("http://google111212.com")
+#domain_name_regex("http://google111212.com")
 
 #TASK7
 #7.	Написать функцию make_readable() принимающая количество секунд и возвращающая количество времени которое прошло HH:MM:SS.
