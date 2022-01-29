@@ -125,9 +125,9 @@ def domain_name_regex(s:str):
 
 def make_readable(time_sec):
     h, m, s = int(), int(),int()
-    h = time_sec//3600
-    m = (time_sec - h*3600)//60
-    s = time_sec%60
+    h = time_sec // 3600
+    m = (time_sec - h*3600) // 60
+    s = time_sec % 60
     if time_sec>=360000:
         return print("99:99:99")
     else:
@@ -163,6 +163,8 @@ def max_sequence(n):
         return print("Отрицательные победили")
 
 aa = int(input())
+if aa<10:
+    aa=10
 max_sequence(aa)
 
 
