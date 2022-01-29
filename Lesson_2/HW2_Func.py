@@ -24,20 +24,24 @@ def info():
     name,surname,birthday,city,email,tel = [input() for _ in range(6)]
     return print(f'Здравствуйте,{name} {surname}, дата рождения {birthday}, проживающий в городе {city}, email {email}, телефон {tel}')
 
-info()
+#info()
 #TASK3
 #3.	Реализовать функцию my_func(), которая принимает три позиционных аргумента и возвращает сумму наибольших двух аргументов.
 # Обработать условие ввода строки
 # Нельзя использовать функции max() min()
 
 def my_func():
+    def maxx(a:int,b:int):
+        if a>b:
+            return a
+        else:
+            return b
     a,b,c = [input() for _ in range(3)]
     if not a.isnumeric() or not b.isnumeric() or not c.isnumeric():
         print('Неправильный ввод')
-    if (a>b)and(a>c)and(b>c):
-        return print(int(a)+int(b))
+    return print(int(maxx(a,b))+int(maxx(b,c)))
 
-#my_func()
+my_func()
 
 #TASK4
 #4.	Программа принимает действительное положительное число x и целое отрицательное число y.
