@@ -93,10 +93,10 @@ def domain_name(s:str):
     return print(ss)
 
 def domain_name_regex(s:str):
-    domain = re.search('//([A-Za-z_0-9.-]+)', s)
+    domain = re.search('//([A-Za-z_0-9.-]+)[.]', s)
     return print(domain.group(1))
 
-domain_name_regex("http://yandex.com")
+domain_name_regex("http://google111212.com")
 
 #TASK7
 #7.	Написать функцию make_readable() принимающая количество секунд и возвращающая количество времени которое прошло HH:MM:SS.
