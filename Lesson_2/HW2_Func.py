@@ -19,8 +19,8 @@ def task1_2(x,y):
         print(f'Ошибка! Делить на ноль нельзя')
 
 
-a,b = int(input()), int(input())
-task1_1(a,b)
+#a,b = int(input()), int(input())
+#task1_1(a,b)
 
 #TASK2
 #2.	Выполнить функцию, которая принимает несколько параметров,
@@ -78,22 +78,22 @@ def my_func11(xx:int,yy:int):
 # Если специальный символ введён после нескольких чисел, то вначале нужно добавить сумму этих чисел к полученной
 # ранее сумме и после этого завершить программу.
 
-def task5():
+def task_5():
     res = 0
     while True:
-        numbers = input('Enter list of number or + to exit: ').split()
+        numbers = input('Enter list of number or STOP to exit: ').split()
         for i in numbers:
             try:
-                if i == '+':
+                if i == 'STOP':
                     print(f'Sum is {res}. Exit')
                     return
                 else:
                     res += int(i)
             except ValueError:
-                print('Enter number or *')
+                print('Enter number or STOP')
         print(f'Sum is {res}')
 
-
+#task_5()
 
 #TASK6
 #Реализовать функцию domain_name() которая принимает название сайта (позиционный аргумент) и возвращает только название домена.
@@ -123,10 +123,18 @@ def domain_name_regex(s:str):
 # Секунды запрашивать у пользователя. Максимально возможное время в 359999 секундах  «99:99:99».
 # Обработать условие сверх времени, если ввели 360000 или более то вывести «99:99:99», «00:00:00» и так для каждого круга сверх времени.
 
+def make_readable(time_sec):
+    h, m, s = int(), int(),int()
+    h = time_sec//3600
+    m = (time_sec - h*3600)//60
+    s = time_sec%60
+    if time_sec>=360000:
+        return print("99:99:99")
+    else:
+        return print(round(h),':',round(m), ':',round(s))
 
-
-def make_readable():
-    return 1
+sec = int(input())
+make_readable(sec)
 
 #TASK8
 #8.	Функция max_sequence() принимает массив (позиционный аргумент) заполненный рандомными числами в диапазоне от -100 до 100.
