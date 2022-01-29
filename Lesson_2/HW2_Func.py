@@ -1,3 +1,5 @@
+import re
+
 #TASK1
 #1.	Реализовать функцию, принимающую два числа (позиционные аргументы) и выполняющую их деление.
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль.
@@ -41,7 +43,7 @@ def my_func():
         print('Неправильный ввод')
     return print(int(maxx(a,b))+int(maxx(b,c)))
 
-my_func()
+#my_func()
 
 #TASK4
 #4.	Программа принимает действительное положительное число x и целое отрицательное число y.
@@ -90,7 +92,11 @@ def domain_name(s:str):
             break
     return print(ss)
 
-#domain_name("http://yandex.com")
+def domain_name_regex(s:str):
+    domain = re.search('//([A-Za-z_0-9.-]+)', s)
+    return print(domain.group(1))
+
+domain_name_regex("http://yandex.com")
 
 #TASK7
 #7.	Написать функцию make_readable() принимающая количество секунд и возвращающая количество времени которое прошло HH:MM:SS.
