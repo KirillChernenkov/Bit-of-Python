@@ -25,6 +25,7 @@ def max_sequence(a:[],n):
 
 nn = int(input())
 mas = []
+
 if nn<10:
     nn=10
 max_sequence(mas,nn)
