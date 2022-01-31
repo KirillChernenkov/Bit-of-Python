@@ -7,8 +7,7 @@
 
 from random import randint
 
-def max_sequence(n):
-    a = []
+def max_sequence(a:[],n):
     sum_pos = int()
     sum_neg = int()
     for i in range(0, n):
@@ -24,7 +23,8 @@ def max_sequence(n):
     else:
         return print("Отрицательные победили")
 
-aa = int(input())
-if aa<10:
-    aa=10
-max_sequence(aa)
+nn = int(input())
+mas = []
+if nn<10:
+    nn=10
+max_sequence(mas,nn)
