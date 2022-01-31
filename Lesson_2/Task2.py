@@ -3,8 +3,8 @@
 # описывающих данные пользователя: имя, фамилия, год рождения, город проживания, email, телефон.
 # Функция должна принимать параметры как именованные аргументы. Осуществить вывод данных о пользователе одной строкой.
 
-def info():
-    name,surname,birthday,city,email,tel = [input() for _ in range(6)]
+def info(name,surname,birthday,city,email,tel):
     return print(f'Здравствуйте,{name} {surname}, дата рождения {birthday}, проживающий в городе {city}, email {email}, телефон {tel}')
 
-info()
+name_input,surname_input,birthday_input,city_input,email_input,tel_input = [input() for _ in range(6)]
+info(name_input,surname_input,birthday_input,city_input,email_input,tel_input)
