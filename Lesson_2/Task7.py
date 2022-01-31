@@ -23,5 +23,6 @@ def make_readable(time_sec):
             if s<10:
                 s='0'+str(s)            print(h+':'+m+':'+s)
 
+
 sec = int(input())
 make_readable(sec)
