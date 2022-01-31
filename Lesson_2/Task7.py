@@ -12,7 +12,10 @@ def make_readable(time_sec):
         else:
             h = time_sec // 3600
             m = (time_sec - h * 3600) // 60
-            s = time_sec % 60
+            if time_sec == 0:
+                s = 1
+            else:
+                s = time_sec % 60
             if h<10:
                 h='0'+str(h)
             if m<10:
