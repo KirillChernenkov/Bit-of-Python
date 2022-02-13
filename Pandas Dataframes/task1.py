@@ -3,8 +3,8 @@ import pandas as pd
 authors = pd.DataFrame()
 authors_id = [1, 2, 3]
 authors_name = ['Тургенев', 'Чехов', 'Островский']
-authors['Author_id'] = authors_id
-authors['Author_name'] = authors_name
+authors['author_id'] = authors_id
+authors['author_name'] = authors_name
 
 book = pd.DataFrame()
 author_id = [1, 1, 1, 2, 2, 3, 3]
@@ -17,3 +17,4 @@ book['price'] = price
 
 print(authors)
 print(book)
+
