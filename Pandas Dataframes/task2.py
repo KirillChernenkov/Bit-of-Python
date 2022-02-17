@@ -15,7 +15,6 @@ book['author_id'] = author_id
 book['book_title'] = book_title
 book['price'] = price
 
-authors_price = pd.DataFrame()
 authors_price = authors.merge(book, on = 'author_id')
 
 print(authors_price)
