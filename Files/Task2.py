@@ -1,5 +1,4 @@
-
-with open(r'C:\Users\Admin\PycharmProjects\Bit-of-Python\HW_Files\task2.txt','r') as new_file:
+with open(r'task2.txt','r') as new_file:
     salary = []
     answer = []
     list1 = new_file.read().split('\n')
@@ -10,4 +9,4 @@ with open(r'C:\Users\Admin\PycharmProjects\Bit-of-Python\HW_Files\task2.txt','r'
         salary.append(x[1])
 
 print('Оклад меньше 20000', answer)
-print('Средний оклад', sum(map(int,salary))/len(list1)
+print('Средний оклад', sum(map(int,salary))/len(list1))
