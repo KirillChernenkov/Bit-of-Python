@@ -15,9 +15,7 @@ book['author_id'] = author_id
 book['book_title'] = book_title
 book['price'] = price
 
-top5 = pd.DataFrame()
-
-authors_price = authors.merge(book, on = 'author_id')
+authors_price = authors.merge(book, on = 'author_id', how = 'inner')
 
 top5 = authors_price.nlargest(5, 'price')
 
