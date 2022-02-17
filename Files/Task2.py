@@ -10,4 +10,4 @@ with open(r'C:\Users\Admin\PycharmProjects\Bit-of-Python\HW_Files\task2.txt','r'
         salary.append(x[1])
 
 print('Оклад меньше 20000', answer)
-print('Средний оклад', sum(map(int,salary))/10)
+print('Средний оклад', sum(map(int,salary))/len(list1)
